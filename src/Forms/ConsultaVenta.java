@@ -194,7 +194,7 @@ public class ConsultaVenta extends javax.swing.JPanel {
             }else{
                 int numeroCompra = Integer.parseInt(txtNumeroVenta.getText());
             try{
-             Connection connection = (com.mysql.jdbc.Connection) DriverManager.getConnection(url, username, password);
+             Connection connection = (com.mysql.jdbc.Connection)DriverManager.getConnection(url, username, password);
                 pstm = connection.prepareStatement("Select * from estaventa where numeroCompra = ?");
                 pstm.setInt(1, numeroCompra);
                 rs = pstm.executeQuery();

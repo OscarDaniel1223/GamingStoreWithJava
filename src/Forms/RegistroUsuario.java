@@ -54,6 +54,8 @@ public class RegistroUsuario extends javax.swing.JPanel {
         btnRegistrar = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         lblConfirm = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(86, 21, 126), 3));
@@ -163,6 +165,26 @@ public class RegistroUsuario extends javax.swing.JPanel {
         lblConfirm.setIcon(new javax.swing.ImageIcon(getClass().getResource("/advertencia.png"))); // NOI18N
         lblConfirm.setText("Las contraseñas no coinciden.");
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view_dark.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel4MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jLabel4MouseReleased(evt);
+            }
+        });
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/view_dark.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                jLabel7MousePressed(evt);
+            }
+            public void mouseReleased(java.awt.event.MouseEvent evt) {
+                jLabel7MouseReleased(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -181,7 +203,9 @@ public class RegistroUsuario extends javax.swing.JPanel {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(lblConfirm)
                                     .addComponent(txtConfirmContra, javax.swing.GroupLayout.PREFERRED_SIZE, 240, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(190, 190, 190)
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel4)
+                        .addGap(148, 148, 148)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(rdbAdmin)
                             .addComponent(rdbUser))
@@ -208,6 +232,11 @@ public class RegistroUsuario extends javax.swing.JPanel {
                         .addGap(220, 220, 220)
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(252, 252, 252))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(565, 565, 565)
+                    .addComponent(jLabel7)
+                    .addContainerGap(738, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -247,12 +276,19 @@ public class RegistroUsuario extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(40, 40, 40)
-                        .addComponent(txtConfirmContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtConfirmContra, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel4))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 15, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(27, 27, 27)
                         .addComponent(lblConfirm)))
                 .addContainerGap(103, Short.MAX_VALUE))
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap(309, Short.MAX_VALUE)
+                    .addComponent(jLabel7)
+                    .addGap(241, 241, 241)))
         );
     }// </editor-fold>//GEN-END:initComponents
     String url = "jdbc:mysql://localhost:3306/tienda";
@@ -360,14 +396,36 @@ public class RegistroUsuario extends javax.swing.JPanel {
 
     }//GEN-LAST:event_btnRegistrarMouseClicked
 
+    private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MousePressed
+        // TODO add your handling code here:
+        txtContra.setEchoChar((char)0);
+    }//GEN-LAST:event_jLabel7MousePressed
+
+    private void jLabel7MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseReleased
+        // TODO add your handling code here:
+        txtContra.setEchoChar('*');
+    }//GEN-LAST:event_jLabel7MouseReleased
+
+    private void jLabel4MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MousePressed
+        // TODO add your handling code here:
+        txtConfirmContra.setEchoChar((char)0);
+    }//GEN-LAST:event_jLabel4MousePressed
+
+    private void jLabel4MouseReleased(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseReleased
+        // TODO add your handling code here:
+        txtConfirmContra.setEchoChar('*');
+    }//GEN-LAST:event_jLabel4MouseReleased
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel btnRegistrar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
